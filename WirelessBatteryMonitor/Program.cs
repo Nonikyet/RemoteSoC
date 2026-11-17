@@ -1219,16 +1219,16 @@ internal sealed class BatteryTrayApplicationContext : ApplicationContext
             g.Clear(Color.Transparent);
 
             string text = percent >= 100 ? "100" : $"{percent}%";
-            float fontSize = text.Length >= 3 ? 13.5f : 15f;
+            float fontSize = text.Length >= 3 ? 17.5f : 21f;
             using var font = new Font("Segoe UI", fontSize, FontStyle.Bold, GraphicsUnit.Pixel);
             using var sf = new StringFormat(StringFormat.GenericTypographic)
             {
-                Alignment = StringAlignment.Near,
+                Alignment = StringAlignment.Center,
                 LineAlignment = StringAlignment.Center,
                 FormatFlags = StringFormatFlags.NoWrap
             };
 
-            g.DrawString(text, font, Brushes.White, new RectangleF(0, 0, 32, 32), sf);
+            g.DrawString(text, font, Brushes.White, new RectangleF(-2, 0, 36, 32), sf);
         }
 
         return BitmapToIcon(bmp);
@@ -1245,9 +1245,9 @@ internal sealed class BatteryTrayApplicationContext : ApplicationContext
             g.Clear(Color.Transparent);
 
             GraphicsState state = g.Save();
-            g.TranslateTransform(5f, -1f);
-            g.ScaleTransform(0.68f, 0.68f);
-            DrawGlyph(g, kind, new Pen(Color.White, 2.4f)
+            g.TranslateTransform(6.5f, -1.5f);
+            g.ScaleTransform(0.58f, 0.58f);
+            DrawGlyph(g, kind, new Pen(Color.White, 2.6f)
             {
                 StartCap = LineCap.Round,
                 EndCap = LineCap.Round,
@@ -1256,14 +1256,14 @@ internal sealed class BatteryTrayApplicationContext : ApplicationContext
             g.Restore(state);
 
             string text = percent >= 100 ? "100" : $"{percent}%";
-            using var font = new Font("Segoe UI", 11f, FontStyle.Bold, GraphicsUnit.Pixel);
+            using var font = new Font("Segoe UI", 14f, FontStyle.Bold, GraphicsUnit.Pixel);
             using var sf = new StringFormat(StringFormat.GenericTypographic)
             {
                 Alignment = StringAlignment.Center,
                 LineAlignment = StringAlignment.Far,
                 FormatFlags = StringFormatFlags.NoWrap
             };
-            g.DrawString(text, font, Brushes.White, new RectangleF(0, 16, 32, 16), sf);
+            g.DrawString(text, font, Brushes.White, new RectangleF(-2, 14, 36, 18), sf);
         }
 
         return BitmapToIcon(bmp);
