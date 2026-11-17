@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <DebugType>none</DebugType>
+
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Authors>Nonikyet (Idea &amp; Concept), Gemini 4 Argon (Code &amp; Implementation)</Authors>
+    <Company>Nonikyet / Gemini 4 Argon</Company>
+    <Product>RemoteSoC Wireless Battery Monitor (Gemini 4 Argon)</Product>
+    <Description>Wireless Battery Monitor — Idea &amp; Concept: 100% Human (Nonikyet) | Code &amp; Implementation: 100% Gemini 4 Argon</Description>
+    <Copyright>Idea &amp; Concept: 100% Human (Nonikyet) | Code &amp; Implementation: 100% Gemini 4 Argon</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute">
+      <_Parameter1>IdeaAndConcept</_Parameter1>
+      <_Parameter2>100% Human (Nonikyet)</_Parameter2>
+    </AssemblyAttribute>
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute">
+      <_Parameter1>CodeAndImplementation</_Parameter1>
+      <_Parameter2>100% Gemini 4 Argon</_Parameter2>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+</Project>
